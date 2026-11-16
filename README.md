@@ -1,54 +1,55 @@
-# Podcast Studio
+# 🎙️ AI Apocalypse? The Podcast Studio
 
-A small Python pipeline that turns UTF-8 source material into a podcast script and an MP3 using the OpenAI API.
+A Python application that transforms research papers about artificial intelligence into a conversational podcast episode. The application uses OpenAI to generate a structured two-host script and create spoken audio for the final episode.
 
-🎙️ AI Apocalypse? — Podcast Studio
+# About the Project
 
-## About
+AI Apocalypse? The Podcast examines concerns about artificial intelligence, including:
 
-_AI Apocalypse?_ is a short podcast that looks at the big fears around artificial intelligence: job loss, misinformation, loss of control, the "superintelligence" scenario.
 
-It asks how much of each fear is real and how much is hype. The question mark is deliberate: we're not predicting the end of the world. We're testing the claims.
+Potentially harmful effects of AI chatbots
+Existential risks and the possibility of AI going rogue
+Evidence versus speculation in discussions about AI
+Practical implications for professionals and society
 
-## Format
+The podcast uses two hosts, Ana and Rui, who discuss the source papers in an informative, balanced, and conversational style.
 
-- **Length:** ~5–10 min per episode
-- **Style:** Conversational, with two hosts. Each episode takes one fear, lays out the arguments on each side, and ends with a takeaway.
+The project is designed for AI-curious professionals and non-experts who want to understand AI risks without unnecessary technical language or sensationalism.
 
-- **Audience:** AI Curious non-experts, professionals wondering how AI will affect their work
+# Features
+Extracts text from PDF research papers
+Supports multiple PDF source documents
+Generates a structured podcast script using the OpenAI API
+Uses two podcast hosts: Ana and Rui
+Generates spoken audio for each host
+Combines the audio segments into one MP3 file
+Provides a Gradio web interface
+Displays the generated transcript
+Displays the sources used in the episode
+Allows users to upload their own PDF sources
+Allows users to load a previously generated episode
 
-## Episode ideas
+#Project Structure
 
-1. Will AI take my job?
-2. Deepfakes & the end of trust
-3. Who's in control: alignment, explained simply
-4. Doom vs. hype: separating signal from noise
-
-## How we built it
-
-We used AI tools across the whole workflow: research, scripting, voice generation, audio editing and cover art.
-
-## Team
-
-- Carolina Uchoa
-- Momina Allawala
-- Tamara Kisters
-
-## Project structure
-
-```text
-podcast-studio/
+Podcast Project/
+├── source_material/
+│   ├── AI and the End of the World.pdf
+│   ├── AI going rogue.pdf
+│   └── Potentially Harmful Consequences of AI.pdf
 ├── src/
 │   ├── data_processor.py
+│   ├── hosts.py
 │   ├── llm_processor.py
-│   ├── tts_generator.py
-│   └── main.py
+│   ├── main.py
+│   └── tts_generator.py
 ├── outputs/
+│   ├── episode_script.json
+│   ├── episode_sources.json
+│   └── final_episode.mp3
 ├── requirements.txt
 ├── README.md
-├── .env                 # local only; never commit
-└── .gitignore
-```
+├── .gitignore
+└── .env
 
 ## Setup
 

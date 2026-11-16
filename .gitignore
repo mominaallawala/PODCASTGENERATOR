@@ -1,0 +1,17 @@
+cd "/Users/cnuchoa/Desktop/AI Consulting/PODCASTGENERATOR-main"
+
+cat > .gitignore <<'EOF'
+.env
+.venv/
+__pycache__/
+.gradio/
+.DS_Store
+outputs/*
+!outputs/.gitkeep
+EOF
+
+touch outputs/.gitkeep
+git init -b main
+git remote add origin https://github.com/mominaallawala/PODCASTGENERATOR.git
+git add .
+git status
