@@ -518,6 +518,41 @@ def launch_interface():
         color: var(--studio-text) !important;
         border-color: var(--studio-border) !important;
     }
+    /* Gradio 6 renders uploaded files as alternating table rows. */
+    #source-upload .file-preview,
+    #source-upload .file-preview-holder {
+        --block-background-fill: var(--studio-panel-2) !important;
+        --table-odd-background-fill: var(--studio-panel-2) !important;
+    }
+    #source-upload .file-preview tbody > tr.file,
+    #source-upload .file-preview tbody > tr.file:nth-child(odd),
+    #source-upload .file-preview tbody > tr.file:nth-child(even),
+    #source-upload .file-preview tbody > tr.file:hover,
+    #source-upload .file-preview tbody > tr.file:focus-within,
+    #source-upload .file-preview tbody > tr.file[aria-selected="true"] {
+        background: var(--studio-panel-2) !important;
+        background-color: var(--studio-panel-2) !important;
+        color: var(--studio-text) !important;
+        border-color: var(--studio-border) !important;
+    }
+    #source-upload .file-preview .filename,
+    #source-upload .file-preview .stem,
+    #source-upload .file-preview .ext,
+    #source-upload .file-preview .filesize,
+    #source-upload .file-preview .download,
+    #source-upload .file-preview .download a,
+    #source-upload .file-preview button {
+        color: var(--studio-text) !important;
+    }
+    #source-upload .file-preview button {
+        background: var(--studio-panel) !important;
+        border-color: var(--studio-border) !important;
+    }
+    #source-upload .file-preview button:hover,
+    #source-upload .file-preview button:focus-visible {
+        background: var(--studio-panel-2) !important;
+        color: var(--studio-text) !important;
+    }
     .gradio-container .audio-container,
     .gradio-container audio {
         background: var(--studio-panel-2) !important;
